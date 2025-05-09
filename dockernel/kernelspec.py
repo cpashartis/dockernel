@@ -159,7 +159,7 @@ def install_kernelspec(kernelspec_dir: Path, kernelspec: Kernelspec) -> None:
         If a kernelspec already exists, i.e. the kernelspec directory is
         present.
     """
-    if kernelspec_dir.exists():
+    if not kernelspec_dir.exists():
         kernelspec_dir.mkdir()
     #    raise ValueError(f"kernelspec already exists: {kernelspec_dir}.")
 
